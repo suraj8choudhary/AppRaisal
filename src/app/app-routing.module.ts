@@ -6,6 +6,7 @@ const routes: Routes = [
   { path: 'implicit/callback', loadChildren: './auth/implicit/auth-callback/auth-callback.module#AuthCallbackPageModule' },
   { path: 'implicit/logout', loadChildren: './auth/implicit/end-session/end-session.module#EndSessionPageModule' },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
+  { path: 'user-details', loadChildren: './user-details/user-details.module#UserDetailsPageModule' },
 ];
 @NgModule({
   imports: [

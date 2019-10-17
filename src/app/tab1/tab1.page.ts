@@ -37,6 +37,7 @@ export class Tab1Page implements OnInit {
   }
 
   public async getUserInfo(): Promise<void> {
+    this.navCtrl.navigateRoot('user-details');
     this.userInfo = await this.authService.getUserInfo<IUserInfo>();
   }
 }
