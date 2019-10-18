@@ -2,17 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-user-details',
-  templateUrl: './user-details.page.html',
-  styleUrls: ['./user-details.page.scss'],
+  selector: 'app-goals',
+  templateUrl: './goals.page.html',
+  styleUrls: ['./goals.page.scss'],
 })
-export class UserDetailsPage implements OnInit {
+export class GoalsPage implements OnInit {
+
   constructor(private navCtrl: NavController) { }
 
   ngOnInit() {
   }
   previous(){
-    this.navCtrl.navigateRoot('tabs');
+    this.navCtrl.navigateRoot('user-details');
   }
   cancel(){
     this.navCtrl.navigateRoot('tabs');
@@ -20,4 +21,5 @@ export class UserDetailsPage implements OnInit {
   next(){
     this.navCtrl.navigateRoot('goals');
   }
+
 }

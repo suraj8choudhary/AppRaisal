@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'implicit/logout', loadChildren: './auth/implicit/end-session/end-session.module#EndSessionPageModule' },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'user-details', loadChildren: './user-details/user-details.module#UserDetailsPageModule' },
+  { path: 'goals', loadChildren: './goals/goals.module#GoalsPageModule' },
 ];
 @NgModule({
   imports: [
