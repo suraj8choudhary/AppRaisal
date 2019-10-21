@@ -2,15 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
-import { IonicModule } from '@ionic/angular';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { UserDetailsPage } from './user-details.page';
+import { IonicModule } from '@ionic/angular';
+
+import { SelfreviewPage } from './selfreview.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: UserDetailsPage
+    component: SelfreviewPage
   }
 ];
 
@@ -22,6 +23,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [UserDetailsPage]
+  declarations: [SelfreviewPage]
 })
-export class UserDetailsPageModule {}
+export class SelfreviewPageModule {}

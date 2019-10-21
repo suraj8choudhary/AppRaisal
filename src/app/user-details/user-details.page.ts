@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { NavController } from '@ionic/angular';
 
 @Component({
@@ -7,8 +8,16 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./user-details.page.scss'],
 })
 export class UserDetailsPage implements OnInit {
-  constructor(private navCtrl: NavController) { }
-
+  public myform : FormGroup;
+  constructor(private navCtrl: NavController,public formBuilder: FormBuilder) {
+  this.myform = formBuilder.group({
+  AssociateID:['',Validators.required],
+  MailId:['',Validators.pattern(".+\@.+\..")],
+  Quarter:['',Validators.required],
+  Year:['',Validators.required],
+  Team:['',Validators.required],
+});
+  }
   ngOnInit() {
   }
   previous(){
@@ -18,6 +27,13 @@ export class UserDetailsPage implements OnInit {
     this.navCtrl.navigateRoot('tabs');
   }
   next(){
-    this.navCtrl.navigateRoot('goals');
+    if(!this.myform.valid)
+    {
+      this.navCtrl.navigateRoot('user-details');
+    }
+    else{
+    console.log(this.myform.value);
+    this.navCtrl.navigateRoot('goals1');
+  }
   }
 }

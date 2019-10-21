@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Self Assessment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="selfreview">
+      <ion-item>
+        <ion-label><b>Self Review</b></ion-label>
+      </ion-item>
+
+  <!-- Textarea in an item with a floating label -->
+  <ion-item>
+    <ion-label position="floating">Learnings</ion-label>
+    <ion-textarea formControlName = "Learnings" rows="6" cols="20" placeholder="Please mention for quarter..."></ion-textarea>
+    </ion-item>
+  <!-- Textarea that clears the value on edit -->
+  <ion-item>
+  <ion-label position="floating">Improvement Area</ion-label>
+  <ion-textarea formControlName = "ImprovementArea" rows="6" cols="20" placeholder="Please mention for quarter..."></ion-textarea>
+  </ion-item>
+
+  <!-- Textarea with custom number of rows and cols -->
+  <ion-item>
+  <ion-label position="floating">Success</ion-label>
+  <ion-textarea formControlName = "Success" rows="6" cols="20" placeholder="Please mention for quarter..."></ion-textarea>
+  </ion-item>
+
+    <ion-card-header>
+      <ion-button (click)="previous()">Prev</ion-button>
+      <ion-button (click)="save()">Save</ion-button>
+      <ion-button (click)="cancel()">Cancel</ion-button>
+      <ion-button (click)="Submit()">Submit</ion-button>
+    </ion-card-header>
+    </form>
+</ion-content>
